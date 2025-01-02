@@ -66,8 +66,8 @@ pipeline {
             steps {
                 script {
                     // Apply Kubernetes deployment and service configurations
-                    sh 'kubectl apply -f deployment.yaml'
-                    sh 'kubectl apply -f service.yaml'
+                    sh 'kubectl apply -f Kubernetes/deployment.yaml'
+                    sh 'kubectl apply -f Kubernetes/service.yaml'
                 }
             }
         }
