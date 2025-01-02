@@ -2,20 +2,21 @@ pipeline {
     agent any // Uses any available Jenkins node
     
     environment {
-        SONAR_URL = "http://34.201.116.83:9000" // SonarQube server URL (update if needed)
+        SONAR_URL = "http://localhost:9000" // SonarQube server URL (update if needed)
     }
 
     stages {
         stage('Checkout') {
             steps {
                 // Clone the repository
-                git branch: 'main', url: 'https://github.com/NithishCodes-2411/java-maven-sonar-argocd-helm-k8s.git'
+                git branch: 'main', url: 'https://github.com/NithishCodes-2411/React-Jenkins-K8s-CICD.git'
             }
         }
 
         stage('Build') {
             steps {
-                // Check the contents of the frontend directory
+                sh 'npm install' // Install dependencies
+                sh 'npm run build' // Build the project
                 sh 'ls' // List the files in the root directory to confirm everything is there
             }
         }
