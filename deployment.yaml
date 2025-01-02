@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: react-app-deployment
+  labels:
+    app: react-app
+spec:
+  replicas: 3  
+  selector:
+    matchLabels:
+      app: react-app
+  template:
+    metadata:
+      labels:
+        app: react-app
+    spec:
+      containers:
+      - name: react-app
+        image: nithishdocker2411/reactapp:${BUILD_NUMBER}  
+        ports:
+        - containerPort: 3000  
+        env:
+        - name: NODE_ENV
+          value: "production"  
+        resources:
+          limits:
+            memory: "512Mi"  
+            cpu: "500m"     
+          requests:
+            memory: "256Mi"  
+            cpu: "250m"     
+        volumeMounts:
+        - name: config-volume
+          mountPath: /etc/config
+      volumes:
+      - name: config-volume
+        configMap:
+          name: react-config  
