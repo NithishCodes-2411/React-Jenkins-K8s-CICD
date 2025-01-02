@@ -1,4 +1,4 @@
-# Jenkins Pipeline
+# Jenkins CI CD Pipeline
 
 This repository contains a Jenkins Pipeline that builds, scans, tests, and deploys a react web app application to a Kubernetes cluster.
 
