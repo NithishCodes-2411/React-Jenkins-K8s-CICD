@@ -2,9 +2,12 @@
 
 This repository contains a Jenkins Pipeline that builds, scans, tests, and deploys a react web app application to a Kubernetes cluster.
 
-### Prerequisites
-- [Jenkins](https://www.jenkins.io/)
+### Using
+- [Docker](https://hub.docker.com/)
 - [Kubernetes](https://kubernetes.io/)
+- [Jenkins](https://www.jenkins.io/)
+- [Sonarkube] (https://www.sonarsource.com/)
+- [React](https://reactjs.org/)
 - [Git](https://git-scm.com/)
 
 ### Pipeline
