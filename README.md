@@ -20,7 +20,6 @@ The pipeline consists of the following stages:
 ### Kubernetes Deployment
 The Kubernetes deployment is defined in the `Kubernetes/deployment.yaml` file. It specifies the container image to use, the number of replicas, and the port to expose.
 
-### Jenkins CI/CD
 ### Architecture 
 ![Description](architecture.svg)
 
